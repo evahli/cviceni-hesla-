@@ -27,3 +27,14 @@ const strongPassword = (len) => {
 
   return result;
 };
+
+const createAccount = (user, generatePassword) => {
+  document.body.innerHTML += `Uzivatel ${user} s heslem ${generatePassword(9)}`
+}
+
+createAccount("Jojo", strongPassword)
+
+/* Napište funkci createAccount, která se bude tvářit, že zakládá nový uživatelský účet. Funkce bude mít dva parametry user a generatePassword. První bude uživatelské jméno a druhý bude funkce, pomocí které se má vygenerovat heslo pro tento účet. Ve funkci createAccount si do proměnné password uložte heslo vygenerované voláním funkce generatePassword. Funkci generatePassword při volání předejte číslo 9 jako délku požadovaného hesla. Funkce createAccount nakonec vrátí řetězec, který bude obsahovat jméno uživatele a vygenerované heslo z proměnné password. Například vrátí "Uživateli Míša s heslem 012345678".
+
+Na konci javascriptového kódu vyzkoušejte založit více různých účtů (volání funkce createAccount) s různými typy hesel. Například:
+*/
